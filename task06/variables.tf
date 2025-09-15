@@ -43,25 +43,29 @@ variable "sql_admin_username" {
 
 # KV secret names per task parameters
 variable "kv_secret_sql_admin_name" {
-  type    = string
-  default = "sql-admin-name"
+  description = "Key Vault secret name to store the SQL admin username"
+  type        = string
+  default     = "sql-admin-name"
 }
 
 variable "kv_secret_sql_admin_password" {
-  type    = string
-  default = "sql-admin-password"
+  description = "Key Vault secret name to store the SQL admin password"
+  type        = string
+  default     = "sql-admin-password"
 }
 
 # DB SKU per task
 variable "sql_db_sku" {
-  type    = string
-  default = "S2"
+  description = "SKU of the Azure SQL Database (DTU model)"
+  type        = string
+  default     = "S2"
 }
 
 # App Service Plan SKU per task
 variable "app_service_plan_sku" {
-  type    = string
-  default = "P0v3"
+  description = "SKU of the App Service Plan (e.g., P0v3)"
+  type        = string
+  default     = "P0v3"
 }
 
 variable "dotnet_version" {
